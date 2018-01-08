@@ -7,13 +7,14 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/aframe.min.js"></script>
-    <script src="js/aframe-ar.min.js"></script>
+    <script src="js/aframe-ar.js"></script>
     <script src="js/three.min.js"></script>
 </head>
 <body style="margin: 0px; overflow: hidden;">
     <a-scene embedded artoolkit='sourceType: webcam;'>
-        <a-box position='0 0.5 0' material='opacity: 0.5;'></a-box>
-        <a-marker-camera preset='custom' type='pattern' url='https://raw.githubusercontent.com/drnhzn/ar/master/pattern/star.patt'></a-marker-camera>
+        <a-video position='0 0.5 0' src="video/test.mp4"></a-video>
+        <!-- <a-box position='0 0.5 0' material='opacity: 0.5;'></a-box> -->
+        <a-marker-camera preset='custom' url='star.patt'></a-marker-camera>
     </a-scene>
 </body>
 </html>
