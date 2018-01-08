@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/aframe.min.js"></script>
@@ -12,7 +13,10 @@
 </head>
 <body style="margin: 0px; overflow: hidden;">
     <a-scene embedded artoolkit='sourceType: webcam;'>
-        <a-video position='0 0.5 0' src="video/test.mp4"></a-video>
+        <a-assets>
+            <video id='test' autoplay loop='true' src='video/test.mp4' playsinline></video>
+        </a-assets>
+        <a-video position='0 0.5 0' rotation="0 90 0" src='#test' playsinline></a-video>
         <!-- <a-box position='0 0.5 0' material='opacity: 0.5;'></a-box> -->
         <a-marker-camera preset='custom' url='star.patt'></a-marker-camera>
     </a-scene>
