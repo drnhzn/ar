@@ -8188,7 +8188,7 @@ AFRAME.registerComponent('arjs-anchor', {
 			if( _this.data.preset === 'hiro' ){
 				arProfile.defaultMarkerParameters.type = 'pattern'
 				arProfile.defaultMarkerParameters.patternUrl = THREEx.ArToolkitContext.baseURL+'examples/marker-training/examples/pattern-files/pattern-hiro.patt'
-				arProfile.defaultMarkerParameters.markersAreaEnabled = false
+				arProfile.defaultMarkerParameters.markersAreaEnabled = true
 			}else if( _this.data.preset === 'kanji' ){
 				arProfile.defaultMarkerParameters.type = 'pattern'
 				arProfile.defaultMarkerParameters.patternUrl = THREEx.ArToolkitContext.baseURL+'examples/marker-training/examples/pattern-files/pattern-kanji.patt'
