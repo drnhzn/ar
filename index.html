@@ -12,7 +12,7 @@
     <script src="js/three.min.js"></script>
 </head>
 <body style="margin: 0px; overflow: hidden;">
-    <a-scene embedded artoolkit='sourceType: webcam;'>
+    <a-scene embedded arjs='sourceType: webcam; detectionMode: mono; maxDetectionRate: 30; canvasWidth: 240; canvasHeight: 180'>
         <a-assets>
             <video id='test' autoplay loop='true' src='video/test.mp4' webkit-playsinline playsinline></video>
         </a-assets>
