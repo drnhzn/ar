@@ -9,19 +9,20 @@
     <script src="js/aframe.min.js"></script>
     <script src="js/aframe-ar.js"></script>
     <script src="js/three.min.js"></script>
-    <script src="js/play.js?v=14"></script>
+    <script src="js/play.js?v=15"></script>
 </head>
 <body style="margin: 0px; overflow: hidden;">
     <a-scene embedded artoolkit='sourceType: webcam;'>
         <a-assets>
             <video id='test' autoplay loop='true' src='video/test.mp4' webkit-playsinline playsinline></video>
+            <a-asset-item id="plane-obj" src="/img/sunsilkPlane_01.obj"></a-asset-item>
             <!-- <img id="my-image" src="img/test.gif"> -->
         </a-assets>
         <!-- <a-image src="#my-image" rotation="-90 0 0"></a-image> -->
         <!-- <a-video postiion="0 0.5 0" rotation="0 0 0" src='#test'></a-video>
         <a-box position='0 0.5 0' material='opacity: 0.5;'></a-box> -->
         <!-- <a-plane height="7.5" width="5.5" rotation="-90 0 0" color="red" opacity="0.5"></a-plane> -->
-        <a-entity obj-model="obj: #plane-obj;" material="color: red" rotation="-90 0 0" color="red" opacity="0.5" position="0 0.5 0"></a-entity>
+        <a-entity obj-model="obj: #plane-obj;" material="color: red; opacity: 0.5" rotation="-90 0 0" position="0 0.5 0"></a-entity>
         <a-marker-camera preset='hiro'></a-marker-camera>
     </a-scene>
 </body>
