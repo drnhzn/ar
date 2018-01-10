@@ -4,6 +4,6 @@
         vid.play();
     });
     $(function () {
-        alert('loaded assets 3');
+        alert('loaded assets 4');
     });
 }(window.jQuery, window, document));

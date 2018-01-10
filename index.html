@@ -9,7 +9,7 @@
     <script src="js/aframe.min.js"></script>
     <script src="js/aframe-ar.js"></script>
     <script src="js/three.min.js"></script>
-    <script src="js/play.js?v=12"></script>
+    <script src="js/play.js?v=13"></script>
 </head>
 <body style="margin: 0px; overflow: hidden;">
     <a-scene embedded artoolkit='sourceType: webcam;'>
@@ -20,7 +20,8 @@
         <!-- <a-image src="#my-image" rotation="-90 0 0"></a-image> -->
         <!-- <a-video postiion="0 0.5 0" rotation="0 0 0" src='#test'></a-video>
         <a-box position='0 0.5 0' material='opacity: 0.5;'></a-box> -->
-        <a-plane height="7.5" width="5.5" rotation="-90 0 0" color="red" opacity="0.5"></a-plane>
+        <!-- <a-plane height="7.5" width="5.5" rotation="-90 0 0" color="red" opacity="0.5"></a-plane> -->
+        <a-entity obj-model="obj: #plane-obj; mtl: #plane-mtl" rotation="-90 0 0" color="red" opacity="0.5" position="0 0.5 0"></a-entity>
         <a-marker-camera preset='hiro'></a-marker-camera>
     </a-scene>
 </body>
