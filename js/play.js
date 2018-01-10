@@ -6,6 +6,6 @@
         alert(vid);
     });
     $(function () {
-        alert('loaded 2');
+        alert('loaded 5');
     });
 }(window.jQuery, window, document));
