@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <title>Document</title>
+    <title>AR</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/jquery.min.js"></script>
     <script src="js/aframe.min.js"></script>
@@ -15,10 +15,10 @@
     <a-scene embedded arjs='sourceType: webcam;'>
         <a-assets>
             <video id='test' autoplay loop='true' src='video/test.mp4' webkit-playsinline playsinline></video>
-            <img id="my-image" src="img/test.gif">
+            <!-- <img id="my-image" src="img/test.gif"> -->
         </a-assets>
         <!-- <a-image src="#my-image" rotation="-90 0 0"></a-image> -->
-        <a-video rotation="-90 0 0" src='#test'></a-video>
+        <a-video postiion="0 0.5 0" rotation="-90 0 0" src='#test'></a-video>
         <!-- <a-box position='0 0.5 0' material='opacity: 0.5;'></a-box> -->
         <a-marker-camera preset='hiro'></a-marker-camera>
     </a-scene>
