@@ -994,20 +994,52 @@ var Qb=[Ik,Zh,_h,Qj,Qi,Pi,Ri,Ag,sg,qg,rg,yg,kh,jh,Oi,Mj];var Rb=[Jk,ki,ji,gi];va
 		}, 1);
 	};
 
+	// ARController.prototype._copyImageToHeap = function(image) {
+	// 	if (!image) {
+	// 		image = this.image;
+	// 	}
+
+
+	// 	if (this.orientation === 'portrait') {
+	// 		this.ctx.save();
+	// 		this.ctx.translate(this.canvas.width, 0);
+	// 		this.ctx.rotate(Math.PI/2);
+	// 		this.ctx.drawImage(image, 0, 0, this.canvas.height, this.canvas.width); // draw video
+	// 		this.ctx.restore();
+	// 	} else {
+	// 		this.ctx.drawImage(image, 0, 0, this.canvas.width, this.canvas.height); // draw video
+	// 	}
+
+	// 	var imageData = this.ctx.getImageData(0, 0, this.canvas.width, this.canvas.height);
+	// 	var data = imageData.data;
+
+	// 	if (this.dataHeap) {
+	// 		this.dataHeap.set( data );
+	// 		return true;
+	// 	}
+	// 	return false;
+	// };
+	// TEST FIX
+	
 	ARController.prototype._copyImageToHeap = function(image) {
 		if (!image) {
 			image = this.image;
 		}
 
-
-		if (this.orientation === 'portrait') {
-			this.ctx.save();
-			this.ctx.translate(this.canvas.width, 0);
-			this.ctx.rotate(Math.PI/2);
-			this.ctx.drawImage(image, 0, 0, this.canvas.height, this.canvas.width); // draw video
-			this.ctx.restore();
-		} else {
+		if (image.videoWidth > image.videoHeight)
+		{
+			//landscape
 			this.ctx.drawImage(image, 0, 0, this.canvas.width, this.canvas.height); // draw video
+		}
+		else {
+
+			this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+			//portrait
+			var scale = this.canvas.height / this.canvas.width;
+			var scaledHeight = this.canvas.width*scale;
+			var scaledWidth = this.canvas.height*scale;
+			var marginLeft = ( this.canvas.width - scaledWidth)/2;
+			this.ctx.drawImage(image, marginLeft, 0, scaledWidth, scaledHeight); // draw video
 		}
 
 		var imageData = this.ctx.getImageData(0, 0, this.canvas.width, this.canvas.height);
