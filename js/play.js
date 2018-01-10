@@ -1,7 +1,8 @@
 (function ($, window, document) {
     var vid = document.querySelector('#test');
     $(document).on('click touchstart', function(){
-        // vid.play();
+        var vid = document.querySelector('#test');
+        vid.play();
         alert(vid);
     });
     $(function () {
