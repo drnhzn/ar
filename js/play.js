@@ -1,7 +1,7 @@
 (function ($, window, document) {
     var vid = document.getElementById("test");
     $(document).on('click touchstart', function(){
-        vid.play();
+        // vid.play();
         alert(vid);
     });
     $(function () {
