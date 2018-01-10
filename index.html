@@ -5,18 +5,20 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.min.js"></script>
     <script src="js/aframe.min.js"></script>
     <script src="js/aframe-ar.js"></script>
     <script src="js/three.min.js"></script>
+    <script src="js/play.js"></script>
 </head>
 <body style="margin: 0px; overflow: hidden;">
-    <a-scene embedded arjs='sourceType: webcam; detectionMode: mono; maxDetectionRate: 30; canvasWidth: 240; canvasHeight: 180'>
+    <a-scene embedded arjs='sourceType: webcam;'>
         <a-assets>
             <video id='test' autoplay loop='true' src='video/test.mp4' webkit-playsinline playsinline></video>
             <img id="my-image" src="img/test.gif">
         </a-assets>
-        <a-image src="#my-image" rotation="-90 0 0"></a-image>
-        <!-- <a-video position='0 0.5 0' rotation="45 0 0" src='#test'></a-video> -->
+        <!-- <a-image src="#my-image" rotation="-90 0 0"></a-image> -->
+        <a-video position='0 0.5 0' rotation="45 0 0" src='#test'></a-video>
         <!-- <a-box position='0 0.5 0' material='opacity: 0.5;'></a-box> -->
         <a-marker-camera preset='hiro'></a-marker-camera>
     </a-scene>
