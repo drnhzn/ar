@@ -1,7 +1,8 @@
 (function ($, window, document) {
+    var vid = document.getElementById("test");
     $(function () {
-        $(window).on('click', function(){
-            $('#test').play();
+        $(document).on('click', function(){
+            vid.play();
         });
     });
 }(window.jQuery, window, document));

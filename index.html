@@ -9,10 +9,10 @@
     <script src="js/aframe.min.js"></script>
     <script src="js/aframe-ar.js"></script>
     <script src="js/three.min.js"></script>
-    <script src="js/play.js"></script>
+    <script src="js/play.js?v=4"></script>
 </head>
 <body style="margin: 0px; overflow: hidden;">
-    <a-scene embedded arjs='sourceType: webcam;'>
+    <a-scene embedded arjs='sourceType: webcam; detectionMode: mono; maxDetectionRate: 30;'>
         <a-assets>
             <video id='test' autoplay loop='true' src='video/test.mp4' webkit-playsinline playsinline></video>
             <img id="my-image" src="img/test.gif">
